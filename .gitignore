@@ -1,0 +1,23 @@
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
+
+# Mac temporary files
+.DS_Store
+
+# Terraform local files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# Sensitive files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
