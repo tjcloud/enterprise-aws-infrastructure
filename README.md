@@ -49,3 +49,10 @@ Day 1 - Development environment setup.
 
 This project uses local AWS emulation.
 It does not represent a production AWS deployment.
+## Day 1 Accomplishments
+
+- Installed development tools on macOS.
+- Learned basic Terminal commands.
+- Created a Python program.
+- Initialized a Git repository.
+- Published the project on GitHub.
