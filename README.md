@@ -9,7 +9,7 @@ automate, test, and document cloud infrastructure.
 ## Business Problem
 
 A company needs a reliable way to create cloud
-infrastructure without manually configuringss
+infrastructure without manually configuring
 every resource.
 
 ## My Solution
