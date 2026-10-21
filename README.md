@@ -56,3 +56,41 @@ It does not represent a production AWS deployment.
 - Created a Python program.
 - Initialized a Git repository.
 - Published the project on GitHub.
+
+## Day 2 - Linux and Bash Automation
+
+### Skills Practiced
+
+- Terminal navigation
+- File and directory management
+- File permissions
+- Environment variables
+- Bash scripting
+- Conditional statements
+- Loops
+- Basic system monitoring
+- Troubleshooting
+
+### Automation Scripts
+
+**setup_check.sh**
+
+Checks required development tools and
+project files.
+
+**system_health.sh**
+
+Reports system information, disk space,
+Docker engine status, and Git status.
+
+### Testing
+
+- Confirmed successful setup checks.
+- Tested detection of a missing README.
+- Ran the system health report.
+- Verified executable script permissions.
+
+### Current Limitations
+
+The monitoring script runs locally on macOS.
+It does not monitor production AWS servers.
