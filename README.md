@@ -94,3 +94,42 @@ Docker engine status, and Git status.
 
 The monitoring script runs locally on macOS.
 It does not monitor production AWS servers.
+## Day 4: Terraform Variable Configuration
+
+### Objective
+Practice separating configuration values from Terraform resource definitions.
+
+### Tools
+- Terraform
+- HashiCorp Local provider
+- Git and GitHub
+
+### Files
+- `versions.tf`: Terraform and provider requirements.
+- `variables.tf`: Input variable declarations.
+- `main.tf`: Local report resource.
+- `outputs.tf`: Values displayed after Terraform runs.
+- `terraform.tfvars.example`: Sample configuration values.
+
+### What I practiced
+- Formatting Terraform configuration.
+- Validating Terraform configuration.
+- Previewing changes with `terraform plan`.
+- Applying changes with `terraform apply`.
+- Using a local variable file to customize project settings.
+- Verifying generated output and Terraform outputs.
+
+### Cost and safety
+This lab uses the Terraform Local provider to generate a file on the local computer. It does not require deploying AWS resources.
+
+### How to run the lab
+1. Install Terraform.
+2. Enter the `terraform/day3-local` directory.
+3. Create a local `terraform.tfvars` file using `terraform.tfvars.example` as a reference.
+4. Run `terraform fmt`.
+5. Run `terraform validate`.
+6. Run `terraform plan`.
+7. Review the plan before running `terraform apply`.
+8. Inspect `project_report.txt` and run `terraform output`.
+
+The local `terraform.tfvars`, generated report, and Terraform state files should not be committed to GitHub.
