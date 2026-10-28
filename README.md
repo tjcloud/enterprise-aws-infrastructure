@@ -43,7 +43,18 @@ will use free local tools.
 
 ## Progress
 
-Day 1 - Development environment setup.
+## Progress
+
+- **Day 1 — Development Environment Setup:** Installed development tools, practiced Terminal basics, created a Python program, and published the repository to GitHub.
+- **Day 2 — Linux and Bash Automation:** Built and tested Bash scripts for setup checks and local system health monitoring.
+- **Day 3 — Terraform Local File Automation:** Created Terraform configuration files, defined input variables and outputs, generated a local project report, and practiced `terraform fmt`, `terraform validate`, `terraform plan`, and `terraform apply`.
+- **Day 4 — Terraform Variable Configuration:** Used `terraform.tfvars` to configure project settings, applied changes, and verified Terraform outputs.
+
+### Day 3 Documentation
+
+[Read the Day 3 Terraform Local File Automation Lab](terraform/day3-local/README.md)
+
+**Current scope:** Days 3–4 use Terraform's Local provider on macOS. They do not deploy AWS resources.
 
 ## Deployment Note
 
