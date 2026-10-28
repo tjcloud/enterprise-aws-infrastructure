@@ -21,3 +21,17 @@ __pycache__/
 *.key
 secrets/
 
+# Terraform working files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfplan.json
+crash.log
+crash.*.log
+
+# Local Terraform variables and generated report
+*.tfvars
+*.tfvars.json
+terraform/day3-local/project_report.txt
+
