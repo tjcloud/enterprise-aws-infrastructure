@@ -35,3 +35,6 @@ crash.*.log
 *.tfvars.json
 terraform/day3-local/project_report.txt
 
+
+# Generated Terraform reports
+**/project_report.txt
