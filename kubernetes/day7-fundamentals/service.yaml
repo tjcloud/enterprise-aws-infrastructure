@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: day7-nginx-service
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app: day7-nginx
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
