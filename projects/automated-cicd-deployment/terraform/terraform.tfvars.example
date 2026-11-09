@@ -1,0 +1,5 @@
+allowed_cidr = "203.0.113.10/32"
+
+# Set to false if your AWS account already has
+# the GitHub OIDC provider.
+# create_github_oidc_provider = false
