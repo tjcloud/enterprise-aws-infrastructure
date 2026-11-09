@@ -17,8 +17,8 @@ def test_home_returns_correct_message():
     response = client.get("/")
     data = response.get_json()
 
-    assert data["message"] == "CI/CD demo application is running"
-    assert data["version"] == "1.0.0"
+    assert data["message"] == "Version 1.1 deployed automatically through GitHub Actions"
+    assert data["version"] == "1.1.0"
 
 
 def test_health_endpoint():

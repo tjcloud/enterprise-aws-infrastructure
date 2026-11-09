@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.get("/")
 def home():
     return jsonify(
-        message="CI/CD demo application is running",
-        version="1.0.0"
+        message="Version 1.1 deployed automatically through GitHub Actions",
+        version="1.1.0"
     )
 
 
