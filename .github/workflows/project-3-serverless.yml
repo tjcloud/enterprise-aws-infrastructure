@@ -58,9 +58,7 @@ jobs:
         run: |
           terraform -chdir=terraform init -backend=false -input=false
 
-      - name: Validate Terraform
-        run: |
-          terraform -chdir=terraform validate
+   
 
       - name: Build Lambda deployment package
         run: |
@@ -84,6 +82,9 @@ jobs:
         run: |
           test -s build/lambda.zip
           ls -lh build/lambda.zip
+      - name: Validate Terraform
+        run: |
+          terraform -chdir=terraform validate
 
       - name: Upload Lambda package artifact
         uses: actions/upload-artifact@v4
