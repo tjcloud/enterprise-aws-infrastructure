@@ -1,0 +1,93 @@
+name: Project 3 - Serverless Image Processing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/serverless-image-processing/**"
+      - ".github/workflows/project-3-serverless.yml"
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "projects/serverless-image-processing/**"
+      - ".github/workflows/project-3-serverless.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test and Package Lambda
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: projects/serverless-image-processing
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-dev.txt
+
+      - name: Run automated tests
+        run: |
+          python -m pytest tests/ -v
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Check Terraform formatting
+        run: |
+          terraform fmt -check -recursive terraform
+
+      - name: Initialize Terraform
+        run: |
+          terraform -chdir=terraform init -backend=false -input=false
+
+      - name: Validate Terraform
+        run: |
+          terraform -chdir=terraform validate
+
+      - name: Build Lambda deployment package
+        run: |
+          mkdir -p build/package
+
+          python -m pip install \
+            --platform manylinux_2_28_x86_64 \
+            --target build/package \
+            --implementation cp \
+            --python-version 3.12 \
+            --only-binary=:all: \
+            --upgrade \
+            -r requirements.txt
+
+          cp app/lambda_function.py build/package/
+
+          cd build/package
+          zip -qr ../lambda.zip .
+
+      - name: Verify Lambda package
+        run: |
+          test -s build/lambda.zip
+          ls -lh build/lambda.zip
+
+      - name: Upload Lambda package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: serverless-image-processing-lambda
+          path: projects/serverless-image-processing/build/lambda.zip
+          retention-days: 7
