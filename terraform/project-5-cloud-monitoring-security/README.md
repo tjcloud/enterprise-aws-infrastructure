@@ -223,3 +223,13 @@ Verify that resources have been removed from AWS. Terraform state files and loca
 - Security event detection
 - End-to-end monitoring verification
 - Git and GitHub version control
+
+## Deployment Status
+
+Completed. The CloudTrail, CloudWatch, IAM, S3, and SNS infrastructure was successfully deployed and verified.
+
+The unauthorized API activity detection workflow was successfully tested end to end, including CloudTrail event capture, CloudWatch metric generation, alarm activation, and SNS email delivery.
+
+The failed console login alarm was configured and its notification action verified, but its trigger was not tested with an actual failed login event.
+
+All Terraform-managed AWS resources were destroyed after testing to prevent ongoing resource costs.

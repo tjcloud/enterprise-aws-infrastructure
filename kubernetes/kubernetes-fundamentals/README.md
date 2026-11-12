@@ -1,4 +1,4 @@
-# Day 7: Kubernetes Fundamentals
+# Kubernetes Fundamentals
 
 ## Project
 Enterprise AWS Infrastructure Automation

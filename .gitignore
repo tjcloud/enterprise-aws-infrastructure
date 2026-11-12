@@ -1,19 +1,23 @@
-
-# Python temporary files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
+.pytest_cache/
 
-# Mac temporary files
+# macOS
 .DS_Store
 
-# Terraform local files
-.terraform/
+# Terraform
+**/.terraform/
 *.tfstate
 *.tfstate.*
 *.tfplan
+tfplan
+*.tfplan.json
+crash.log
+crash.*.log
 
-# Sensitive files
+# Sensitive configuration
 .env
 .env.*
 !.env.example
@@ -21,20 +25,9 @@ __pycache__/
 *.key
 secrets/
 
-# Terraform working files
-**/.terraform/
-*.tfstate
-*.tfstate.*
-*.tfplan
-*.tfplan.json
-crash.log
-crash.*.log
-
-# Local Terraform variables and generated report
+# Local Terraform variables
 *.tfvars
 *.tfvars.json
-terraform/day3-local/project_report.txt
 
-
-# Generated Terraform reports
+# Generated reports
 **/project_report.txt

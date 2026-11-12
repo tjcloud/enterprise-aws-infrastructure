@@ -1,146 +1,197 @@
+# Cloud Engineering Portfolio | AWS, Terraform, Docker & DevOps
 
-# Enterprise AWS Infrastructure Automation
+## About This Portfolio
 
-## About This Project
+Welcome to my cloud engineering portfolio. This repository showcases five hands-on projects demonstrating practical experience building, deploying, automating, securing, and monitoring cloud infrastructure and applications.
 
-This project demonstrates my ability to design,
-automate, test, and document cloud infrastructure.
+I use AWS, Terraform, Python, Docker, Kubernetes, Jenkins, GitHub Actions, and other cloud engineering tools to develop and test real-world infrastructure and automation workflows.
 
-## Business Problem
+My focus is on developing practical cloud engineering skills through hands-on implementation, troubleshooting, security, automation, and infrastructure lifecycle management.
 
-A company needs a reliable way to create cloud
-infrastructure without manually configuring
-every resource.
+---
 
-## My Solution
+# Featured Cloud Engineering Projects
 
-I am building an automated infrastructure platform
-using Terraform, Python, Bash, Docker, and
-AWS-compatible local services.
+## Project 1 — Enterprise AWS Infrastructure Automation
 
-## Technologies
+**Technologies:** AWS, Terraform, Docker, Python, Kubernetes, Jenkins, Bash, Git, GitHub
 
-- Terraform
-- AWS cloud architecture concepts
-- LocalStack
-- Docker
-- Python
-- Bash
-- Git and GitHub
+**Location:** Repository root and supporting project directories.
 
-## Project Goals
+Developed a collection of infrastructure automation and containerization exercises demonstrating foundational cloud engineering capabilities.
 
-1. Automate infrastructure provisioning.
-2. Design secure cloud networking.
-3. Develop infrastructure automation scripts.
-4. Validate infrastructure configurations.
-5. Document and troubleshoot problems.
+**Key implementations:**
+- Created reusable Terraform modules and infrastructure configurations.
+- Provisioned and verified AWS networking infrastructure.
+- Built and executed a Python application inside a Docker container.
+- Created Kubernetes deployments and services.
+- Developed a Jenkins declarative CI/CD pipeline.
+- Practiced infrastructure validation, troubleshooting, and resource cleanup.
 
-## Cost
+**Skills demonstrated:** Infrastructure as Code, containerization, orchestration, CI/CD fundamentals, AWS networking, and automation.
 
-$0 AWS spending. Development and testing
-will use free local tools.
+## Project 2 — Automated AWS CI/CD Deployment Platform
 
-## Progress
+**Technologies:** AWS ECS Fargate, Amazon ECR, AWS IAM, Terraform, Docker, Python, Flask, GitHub Actions, GitHub OIDC, CloudWatch
 
-## Progress
+**Location:** [View Project 2](projects/automated-cicd-deployment/)
 
-- **Day 1 — Development Environment Setup:** Installed development tools, practiced Terminal basics, created a Python program, and published the repository to GitHub.
-- **Day 2 — Linux and Bash Automation:** Built and tested Bash scripts for setup checks and local system health monitoring.
-- **Day 3 — Terraform Local File Automation:** Created Terraform configuration files, defined input variables and outputs, generated a local project report, and practiced `terraform fmt`, `terraform validate`, `terraform plan`, and `terraform apply`.
-- **Day 4 — Terraform Variable Configuration:** Used `terraform.tfvars` to configure project settings, applied changes, and verified Terraform outputs.
+Built an automated CI/CD deployment platform that tests, builds, and deploys a containerized Python application to Amazon ECS Fargate.
 
-### Day 3 Documentation
+**Key implementations:**
+- Created a Python Flask application with application and health-check endpoints.
+- Containerized the application using Docker.
+- Automated testing and deployment using GitHub Actions.
+- Configured GitHub OIDC authentication with AWS IAM.
+- Pushed container images to Amazon ECR.
+- Deployed the application to Amazon ECS Fargate.
+- Verified application deployment and version updates.
+- Used CloudWatch to inspect application logs.
 
-[Read the Day 3 Terraform Local File Automation Lab](terraform/day3-local/README.md)
+**Results:** Successfully deployed and verified two application versions. All 18 Terraform-managed AWS resources were destroyed after testing.
 
-**Current scope:** Days 3–4 use Terraform's Local provider on macOS. They do not deploy AWS resources.
+## Project 3 — Serverless Event-Driven Image Processing
 
-## Deployment Note
+**Technologies:** AWS Lambda, Amazon S3, Amazon DynamoDB, CloudWatch, Python, Pillow, Terraform, GitHub Actions, Pytest
 
-This project uses local AWS emulation.
-It does not represent a production AWS deployment.
-## Day 1 Accomplishments
+**Location:** [View Project 3](projects/serverless-image-processing/)
 
-- Installed development tools on macOS.
-- Learned basic Terminal commands.
-- Created a Python program.
-- Initialized a Git repository.
-- Published the project on GitHub.
+Built a serverless image-processing application that automatically processes images uploaded to Amazon S3.
 
-## Day 2 - Linux and Bash Automation
+**Key implementations:**
+- Configured S3 event notifications to trigger AWS Lambda.
+- Developed Python image-processing functionality using Pillow.
+- Resized images and converted them into JPEG format.
+- Stored processed images in a separate S3 output bucket.
+- Recorded processing metadata and status in DynamoDB.
+- Used CloudWatch to inspect execution logs.
+- Created automated tests and a GitHub Actions workflow.
 
-### Skills Practiced
+**Results:** Successfully verified image processing, output storage, and DynamoDB metadata updates. All four automated Pytest cases passed. Unsupported file handling was also verified.
 
-- Terminal navigation
-- File and directory management
-- File permissions
-- Environment variables
-- Bash scripting
-- Conditional statements
-- Loops
-- Basic system monitoring
-- Troubleshooting
+All AWS resources were destroyed after testing.
 
-### Automation Scripts
+## Project 4 — Enterprise AWS Networking and Security
 
-**setup_check.sh**
+**Technologies:** AWS VPC, Subnets, Internet Gateway, Route Tables, Network ACLs, Security Groups, IAM, Terraform, AWS CLI
 
-Checks required development tools and
-project files.
+**Location:** [View Project 4](terraform/project-4-network-security/)
 
-**system_health.sh**
+Designed and provisioned a segmented AWS network environment using Terraform, with separate public and private subnets across multiple availability zones.
 
-Reports system information, disk space,
-Docker engine status, and Git status.
+**Key implementations:**
+- Created a custom VPC.
+- Provisioned two public and two private subnets.
+- Configured an Internet Gateway and separate route tables.
+- Implemented custom Network ACL rules.
+- Created a security group with HTTPS ingress rules.
+- Developed a read-only IAM policy for EC2 inspection.
+- Independently verified deployed infrastructure using AWS CLI.
 
-### Testing
+**Results:** Successfully provisioned and verified 16 AWS resources. Practiced network segmentation, traffic filtering, access control, and infrastructure validation.
 
-- Confirmed successful setup checks.
-- Tested detection of a missing README.
-- Ran the system health report.
-- Verified executable script permissions.
+All AWS resources were destroyed after testing.
 
-### Current Limitations
+## Project 5 — Cloud Monitoring and Security Platform
 
-The monitoring script runs locally on macOS.
-It does not monitor production AWS servers.
-## Day 4: Terraform Variable Configuration
+**Technologies:** AWS CloudTrail, Amazon S3, Amazon CloudWatch, Amazon SNS, AWS IAM, Terraform, AWS CLI
 
-### Objective
-Practice separating configuration values from Terraform resource definitions.
+**Location:** [View Project 5](terraform/project-5-cloud-monitoring-security/)
 
-### Tools
-- Terraform
-- HashiCorp Local provider
-- Git and GitHub
+Built an AWS monitoring and security alerting platform to detect suspicious API activity and monitor failed console sign-in attempts.
 
-### Files
-- `versions.tf`: Terraform and provider requirements.
-- `variables.tf`: Input variable declarations.
-- `main.tf`: Local report resource.
-- `outputs.tf`: Values displayed after Terraform runs.
-- `terraform.tfvars.example`: Sample configuration values.
+**Key implementations:**
+- Configured multi-region AWS CloudTrail logging.
+- Stored audit logs in an encrypted S3 bucket.
+- Integrated CloudTrail with CloudWatch Logs.
+- Created metric filters for unauthorized API activity.
+- Configured CloudWatch alarms for security events.
+- Set up SNS email notifications.
+- Configured monitoring for failed console login attempts.
+- Applied IAM permissions for log delivery and monitoring.
 
-### What I practiced
-- Formatting Terraform configuration.
-- Validating Terraform configuration.
-- Previewing changes with `terraform plan`.
-- Applying changes with `terraform apply`.
-- Using a local variable file to customize project settings.
-- Verifying generated output and Terraform outputs.
+**Results:** Successfully tested unauthorized API activity detection end to end, including CloudTrail event capture, CloudWatch metric generation, alarm activation, and SNS email delivery.
 
-### Cost and safety
-This lab uses the Terraform Local provider to generate a file on the local computer. It does not require deploying AWS resources.
+The failed console login alarm was configured, but its trigger was not tested with an actual failed login event.
 
-### How to run the lab
-1. Install Terraform.
-2. Enter the `terraform/day3-local` directory.
-3. Create a local `terraform.tfvars` file using `terraform.tfvars.example` as a reference.
-4. Run `terraform fmt`.
-5. Run `terraform validate`.
-6. Run `terraform plan`.
-7. Review the plan before running `terraform apply`.
-8. Inspect `project_report.txt` and run `terraform output`.
+All AWS resources were destroyed after testing.
 
-The local `terraform.tfvars`, generated report, and Terraform state files should not be committed to GitHub.
+---
+
+# Technical Skills and Tools
+
+| Category | Technologies |
+|---|---|
+| Cloud Platform | Amazon Web Services (AWS) |
+| Infrastructure as Code | Terraform, HCL |
+| CI/CD | GitHub Actions, Jenkins |
+| Containers | Docker, Amazon ECR |
+| Container Orchestration | Kubernetes |
+| Compute | AWS Lambda, Amazon ECS Fargate |
+| Networking | VPC, Subnets, Route Tables, Internet Gateway, NACLs, Security Groups |
+| Security | IAM, OIDC, CloudTrail |
+| Monitoring | CloudWatch, SNS |
+| Storage and Databases | Amazon S3, DynamoDB |
+| Programming | Python, Bash |
+| Testing | Pytest |
+| Version Control | Git, GitHub |
+
+# Supporting Engineering Labs
+
+In addition to the five featured projects, this repository contains supporting exercises in:
+
+- Terraform local infrastructure automation.
+- Reusable Terraform modules.
+- Docker application containerization.
+- Kubernetes deployments and services.
+- Jenkins pipeline automation.
+- AWS networking fundamentals.
+- Infrastructure validation and troubleshooting.
+
+# Security and Cost Management
+
+AWS infrastructure was deployed for hands-on testing and verification.
+
+After testing, AWS resources were destroyed to avoid ongoing infrastructure charges.
+
+Security practices included:
+- IAM-based access control.
+- GitHub OIDC authentication for CI/CD deployments.
+- AWS IAM Identity Center authentication.
+- No permanent AWS access keys stored in the repository.
+- Terraform state, local variables, and sensitive configuration excluded from Git tracking.
+
+# Repository Structure
+
+```text
+enterprise-aws-infrastructure/
+├── .github/
+│   └── workflows/
+├── docker/
+│   └── python-containerization/
+├── jenkins/
+│   └── cicd-automation/
+├── kubernetes/
+│   ├── kubernetes-fundamentals/
+│   └── kubernetes-deployment/
+├── projects/
+│   ├── automated-cicd-deployment/
+│   └── serverless-image-processing/
+├── terraform/
+│   ├── local-infrastructure-automation/
+│   ├── reusable-terraform-modules/
+│   ├── aws-networking-foundation/
+│   ├── project-4-network-security/
+│   └── project-5-cloud-monitoring-security/
+├── scripts/
+├── .gitignore
+└── README.md
+```
+
+# Portfolio Status
+
+**Five cloud engineering portfolio projects completed.**
+
+Each project includes documentation covering its architecture, technologies, implementation, testing, and deployment or cleanup status.
+
+The goal of this portfolio is to demonstrate practical cloud engineering ability through hands-on projects rather than relying solely on certifications or coursework.

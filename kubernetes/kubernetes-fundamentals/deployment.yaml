@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: day7-nginx-deployment
+  name: nginx-fundamentals-deployment
 
 spec:
   replicas: 2
 
   selector:
     matchLabels:
-      app: day7-nginx
+      app: nginx-fundamentals
 
   template:
     metadata:
       labels:
-        app: day7-nginx
+        app: nginx-fundamentals
 
     spec:
       containers:

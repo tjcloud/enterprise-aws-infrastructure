@@ -6,7 +6,7 @@ def main():
     print("Project: AWS Infrastructure Automation")
     print("Environment: Local MacBook")
     print("AWS Cost: $0")
-    print("Status: Day 1 Complete")
+    print("Status: Application Execution Successful")
 
 
 if __name__ == "__main__":

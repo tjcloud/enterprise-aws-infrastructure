@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                     set -eu
                     test -f hello_cloud.py
-                    test -f docker/day6-python-app/Dockerfile
+                    test -f docker/python-containerization/Dockerfile
                     grep -q "CLOUD ENGINEERING PROJECT 1" hello_cloud.py
                     echo "Project validation passed."
                 '''
@@ -24,8 +24,8 @@ pipeline {
             steps {
                 sh '''
                     docker build \
-                      -f docker/day6-python-app/Dockerfile \
-                      -t hello-cloud:day9 \
+                      -f docker/python-containerization/Dockerfile \
+                      -t hello-cloud:latest \
                       .
                 '''
             }
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sh '''
                     set -eu
-                    output="$(docker run --rm hello-cloud:day9)"
+                    output="$(docker run --rm hello-cloud:latest)"
                     printf '%s\\n' "$output"
                     printf '%s\\n' "$output" | grep -q "CLOUD ENGINEERING PROJECT 1"
                     printf '%s\\n' "$output" | grep -q "AWS Cost: \\$0"

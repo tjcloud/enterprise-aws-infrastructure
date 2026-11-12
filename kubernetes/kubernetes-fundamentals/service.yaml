@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: day7-nginx-service
+  name: nginx-fundamentals-service
 
 spec:
   type: ClusterIP
 
   selector:
-    app: day7-nginx
+    app: nginx-fundamentals
 
   ports:
     - protocol: TCP

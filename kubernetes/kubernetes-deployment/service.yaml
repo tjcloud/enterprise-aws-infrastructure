@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: day8-nginx-service
+  name: nginx-app-service
 
 spec:
   type: ClusterIP
 
   selector:
-    app: day8-nginx
+    app: nginx-app
 
   ports:
     - protocol: TCP

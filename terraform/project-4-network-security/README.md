@@ -177,3 +177,9 @@ terraform destroy
 ```
 
 Review the destruction plan and confirm before proceeding.
+
+## Deployment Status
+
+Completed. Terraform successfully provisioned and AWS CLI independently verified all 16 resources. The AWS infrastructure was subsequently destroyed to prevent ongoing resource costs.
+
+The deployment plan file (`project4.tfplan`) is local-only and should not be committed to GitHub.

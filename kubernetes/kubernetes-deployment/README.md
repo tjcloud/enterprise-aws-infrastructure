@@ -1,4 +1,4 @@
-# Day 8: Kubernetes Application Deployment and Management
+# Kubernetes Application Deployment and Management
 
 ## Project
 Enterprise AWS Infrastructure Automation

@@ -139,9 +139,9 @@ applied, and destroyed independently of the application code.
 
 This project was deployed as a temporary AWS portfolio lab.
 
-After testing, the ECS service was scaled to zero.
-The infrastructure was scheduled for Terraform destruction to avoid
-unnecessary ongoing AWS resource charges.
+After testing, the ECS service was scaled to zero. All 18 Terraform-managed AWS resources were destroyed, and remaining ECS task-definition revisions were deregistered.
+
+No project infrastructure was left running after testing.
 
 ## Key Skills Demonstrated
 
