@@ -16,7 +16,7 @@ My focus is on developing practical cloud engineering skills through hands-on im
 
 **Technologies:** AWS, Terraform, Docker, Python, Kubernetes, Jenkins, Bash, Git, GitHub
 
-**Location:** Repository root and supporting project directories.
+**Location:** [View Project 1](https://github.com/tjcloud/enterprise-aws-infrastructure)
 
 Developed a collection of infrastructure automation and containerization exercises demonstrating foundational cloud engineering capabilities.
 
