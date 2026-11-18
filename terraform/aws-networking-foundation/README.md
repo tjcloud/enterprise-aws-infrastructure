@@ -77,3 +77,38 @@ Running `terraform apply` creates actual AWS resources that may incur charges. R
 ## Project Status
 
 Completed. Infrastructure was successfully provisioned, verified, and destroyed.
+
+## Architecture
+
+This project builds the foundational AWS network infrastructure for a cloud environment using Terraform.
+
+### Infrastructure Components
+
+- **Amazon VPC:** `10.20.0.0/16`
+- **Public Subnet:** `10.20.1.0/24`
+- **Internet Gateway:** Provides an internet gateway attachment to the VPC
+- **Route Table:** Configured with a default route (`0.0.0.0/0`)
+- **Route Table Association:** Connects the subnet to the route table
+
+### Architecture Diagram
+
+```text
+                 Internet
+                    |
+             Internet Gateway
+                    |
+          +---------------------+
+          |    AWS VPC          |
+          |    10.20.0.0/16     |
+          |                     |
+          |  +---------------+  |
+          |  | Public Subnet |  |
+          |  | 10.20.1.0/24  |  |
+          |  +---------------+  |
+          |          |          |
+          |      Route Table    |
+          |      0.0.0.0/0      |
+          +---------------------+
+```
+
+*Note: This project establishes networking foundations only. It does not deploy EC2 instances, NAT gateways, load balancers, or application workloads.*
