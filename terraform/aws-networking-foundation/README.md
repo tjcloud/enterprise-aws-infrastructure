@@ -90,7 +90,7 @@ This project builds the foundational AWS network infrastructure for a cloud envi
 - **Route Table:** Configured with a default route (`0.0.0.0/0`)
 - **Route Table Association:** Connects the subnet to the route table
 
-### Architecture Diagram
+### Infrastructure Details
 
 ```text
                  Internet
