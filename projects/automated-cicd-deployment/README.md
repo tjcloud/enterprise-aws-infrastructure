@@ -171,14 +171,3 @@ No project infrastructure was left running after testing.
 ### CloudWatch application logs
 
 ![CloudWatch application logs](screenshots/03-cloudwatch-application-logs.png)
-
-## Screenshots
-
-### Initial ECS Deployment
-![Initial ECS Deployment](screenshots/01-initial-deployment.png)
-
-### Automated Version 1.1 Deployment
-![Automated Version 1.1 Deployment](screenshots/02-automated-version-1.1-deployment.png)
-
-### CloudWatch Application Logs
-![CloudWatch Application Logs](screenshots/03-cloudwatch-application-logs.png)
