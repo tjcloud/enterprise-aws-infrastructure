@@ -321,5 +321,3 @@ Unsupported file handling and all four automated Pytest cases were verified.
 The GitHub Actions workflow successfully tested the application, validated Terraform configuration, and packaged the Lambda deployment ZIP.
 
 All AWS resources were destroyed after testing to prevent ongoing resource costs.
-
-**Project Status:** Successfully implemented and tested in AWS.
