@@ -233,3 +233,28 @@ The unauthorized API activity detection workflow was successfully tested end to 
 The failed console login alarm was configured and its notification action verified, but its trigger was not tested with an actual failed login event.
 
 All Terraform-managed AWS resources were destroyed after testing to prevent ongoing resource costs.
+
+
+## Deployment Evidence
+
+### 1. CloudTrail Logging
+![CloudTrail Logging](screenshots/01-cloudtrail-logging.png)
+
+### 2. Unauthorized API Alarm
+![Unauthorized API Alarm](screenshots/02-unauthorized-api-alarm.png)
+
+### 3. Unauthorized API Metric
+![Unauthorized API Metric](screenshots/03-unauthorized-api-metric.png)
+
+### 4. SNS Security Alert
+![SNS Security Alert](screenshots/04-sns-security-alert.png)
+
+### 5. Terraform Outputs
+![Terraform Outputs](screenshots/05-terraform-outputs.png)
+
+### 6. Failed Login Alarm
+![Failed Login Alarm](screenshots/06-failed-login-alarm.png)
+
+### 7. Terraform Destroy Complete
+![Terraform Destroy Complete](screenshots/07-terraform-destroy-complete.png)
+
